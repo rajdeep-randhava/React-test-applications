@@ -16,22 +16,22 @@ const register = Yup.object({
     .matches(/^([a-zA-Z])*$/, "Enter string only!!"),
   email: Yup.string()
     .email("Please Enter a valid email!!")
-    .required("This field is required!!")
-    .trim("This field is required!!"),
-  dob: Yup.date().required("This field is required!!"),
+    .required("Email is required!!")
+    .trim("Email is required!!"),
+  dob: Yup.date().required("Date Of Birth is required!!"),
   address: Yup.string()
-    .required("This field is required!!")
-    .trim("This field is required!!"),
+    .required("Address is required!!")
+    .trim("Address is required!!"),
   password: Yup.string()
-    .required("This field is required!!")
+    .required("Password is required!!")
     .min(6, "Password must be at least 6 characters"),
   confirmPassword: Yup.string()
-    .required("This field is required!!")
+    .required("Password is required!!")
     .oneOf([Yup.ref("password"), null], "Passwords must match!!"),
   phoneNumber: Yup.string()
-    .trim("This field is required!!")
+    .trim("Phone Number is required!!")
     .matches(/^([0-9])*$/, "Enter numbers only!!")
-    .required("This field is required!!")
+    .required("Phone Number is required!!")
 });
 
 export { register };

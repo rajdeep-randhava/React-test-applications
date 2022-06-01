@@ -12,7 +12,7 @@ const FormikForm = () => {
     setValue("firstName", value);
   };
   return (
-    <div>
+    <div className="col-md-4 offset-md-4" >
       <Formik
         initialValues={{
           firstName: "",
@@ -101,6 +101,7 @@ const FormikForm = () => {
             </InputGroup>
             <InputGroup className="mb-3">
               <FormControl
+              type="password"
                 value={values.password}
                 name="password"
                 onChange={handleChange}
@@ -111,6 +112,7 @@ const FormikForm = () => {
             </InputGroup>
             <InputGroup className="mb-3">
               <FormControl
+              type="password"
                 value={values.confirmPassword}
                 name="confirmPassword"
                 onChange={handleChange}
