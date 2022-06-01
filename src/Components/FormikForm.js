@@ -43,10 +43,11 @@ const FormikForm = () => {
           setFieldTouched
         }) => (
           <form onSubmit={handleSubmit}>
-            <InputGroup className="mb-3">
+            <InputGroup className="mb-3 input-group">
               <FormControl
                 value={values.firstName}
                 name="firstName"
+                className="form-control"
                 onChange={(e) => {
                   onNameChange(e.target.value, setFieldValue);
                 }}

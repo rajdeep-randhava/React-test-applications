@@ -1,5 +1,6 @@
 import * as Yup from "yup";
 
+
 const register = Yup.object({
   firstName: Yup.string()
     .min(2, "Too Short!")
